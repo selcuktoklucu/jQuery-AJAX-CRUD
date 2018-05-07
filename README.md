@@ -4,13 +4,20 @@
 
 ## Prerequisites
 
--
+-   [http-study](https://git.generalassemb.ly/ga-wdi-boston/http-study)
+-   [json-study](https://git.generalassemb.ly/ga-wdi-boston/json-study)
 
 ## Objectives
 
 By the end of this, developers should be able to:
 
--
+- Make HTTP requests to an API using `curl` and AJAX to:
+  -  (R)EAD resource collection.
+  -  (R)EAD specific resource.
+  -  (D)ELETE specific resource.
+  -  (U)PDATE specific resource.
+  -  (C)REATE new resource.
+- Use response data in future requests.
 
 ## Preparation
 
@@ -20,62 +27,111 @@ By the end of this, developers should be able to:
 1.  Checkout to the `training` branch.
 1.  Install dependencies with `npm install`.
 
-## Leading Topic Heading
+## Library API
 
-Here is where the talk begins. If you have not already included framing above,
-it's appropriate to put it here. Link to introductory articles or documentation.
-Motivate the next section.
+| Verb   | URI Pattern  | Result |
+|:-------|:-------------|:------------------|
+| GET    | `/books`     | read list of books|
+| GET    | `/books/:id` | read single book  |
+| POST   | `/books`     | create book       |
+| PATCH  | `/books/:id` | update book       |
+| DELETE | `/books/:id` | destroy book      |
 
-Demos, exercises, and labs are labelled as such, followed by a colon and a
-description of the activity starting with an [imperative
-verb](https://en.wikipedia.org/wiki/Imperative_mood).
+We'll make requests to and receive responses from an HTTP server hosted at https://wdi-library-api.herokuapp.com.
 
-## Demo: Write a Demo
+If not already installed in chrome, let's add a [JSON formatting utility](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en).  Go to https://wdi-library-api.herokuapp.com/books to read the list of books.
 
-Demos are demonstrations, and developers should give their full attention to
-them. It's a great time for them to take notes about important concepts before
-applying them in an exercise.
+## Methodical Approach
+1.  Test API in browser (if possible)
+1.  Make API with curl script
+1.  Add feature to web application with AJAX
+    1.  Add a form to `index.html`.
+    1.  Add a input fields and submit input to the form.
+    1.  Add an event listener to the form in the document ready event in
+ `assets/scripts/index.js`.
+    1.  Add a submit handler to pass as callback to event listener
+  `assets/scripts/books/events.js`.
+    1.  Add a API call in `assets/scripts/books/api.js`.
+    1.  Add a success and failure handler in `assets/scripts/books/ui.js`.
 
-Demos correspond to the "I do" portion of scaffolding from consultant training.
+### How to use `getFormFields`
 
-## Code-Along: Write an Code-Along
+To be able to fetch data for just one book, we'll need a way to tell the API
+which book we're looking for. One way to do this is to have the user input the
+ID of the book they're looking for. It turns out that needing to grab some user
+input and send it to the API is a very common problem in front-end web
+development.
 
-During the code-along, developers should apply concepts covered in the previous
-demo, led by the consultant.
-This is their first chance to generalize concepts introduced. Exercises should
-be very focused, and flow natural into a lab.
+To help solve that problem, we've included a function called `getFormFields` in
+the template that we use for our lessons, which is also the template you'll use
+for your projects. Let's take a look at how to use that function.
 
-Exercises correspond to the "We do" portion of scaffolding from consultant
-training.
+First, your `<input>`s will need to be wrapped in a `<form>`, like this:
 
-## Lab: Write a Lab
+```html
+<form id="my-form">
+  <input name="book[id]" type="text">
+  <input name="book[name]" type="text">
+  <button type="submit">Get Book</button>
+</form>
+```
+Then, in your Javascript, you'd do something like this:
 
-During labs, developers get to demonstrate their understanding of concepts from
-demos and applied knowledge from exercises. Labs are an opportunity for
-developers to build confidence, and also serve as a diagnostic tool for
-consultants to evaluate developer understanding.
+```js
+const getFormFields = require('<path to lib>/get-form-fields.js')
 
-Labs should be timed explicitly using a timer. When estimating the time it will
-take to complete a lab, it is better to overestimate. During labs, consultants
-should circle the room and interact with developers, noting patterns and
-prompting with hints on how to complete the lab. If developers end early, a
-consultant may stop the lab timer. If developers do not finish in time, a
-consultant may give more time at her discretion based on current talk pace, the
-current estimate for the talk, and the importance of completing the lab while
-consultant support is available.
+$('#my-form').on('submit', function (event) {
+  event.preventDefault()
 
-Labs correspond to the "You do" portion of scaffolding from consultant
-training.
+  const form = event.target
+  const data = getFormFields(form)
+})
+```
+
+Then, the `data` variable would look like this:
+
+```js
+{
+  book: {
+    id: "<whatever was entered in the ID input >",
+    name: "<whatever was entered in the name input>"
+  }
+}
+```
+
+**Note:** In this training, and in your projects, you'll spread the above Javascript across a couple different files to keep everything organized.
+
+## CRUD a Resource
+
+### Code along: (R)EAD resource collection
+- browser
+- curl
+- AJAX
+
+### Code along: (R)EAD specific resource
+- browser
+- curl
+- AJAX
+
+### Lab: (D)ELETE specific resource
+- browser(?)
+- curl
+- AJAX
+
+### Code along: (U)PDATE specific resource
+- browser(?)
+- curl
+- AJAX
+
+### Lab: (C)REATE new resource
+- browser(?)
+- curl
+- AJAX
 
 ## Additional Resources
 
--   Any useful links should be included in the talk material where the link is
-    first referenced.
--   Additional links for further study or exploration are appropriate in this
-    section.
--   Links to important parts of documentation not covered during the talk, or
-    tools tangentially used but not part of the focus of the talk, are also
-    appropriate.
+-   [Learn jQuery AJAX](https://learn.jquery.com/ajax/jquery-ajax-methods/)
+-   [jQuery AJAX Docs](http://api.jquery.com/jquery.ajax/)
 
 ## [License](LICENSE)
 

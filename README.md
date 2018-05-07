@@ -101,35 +101,34 @@ Then, the `data` variable would look like this:
 
 **Note:** In this training, and in your projects, you'll spread the above Javascript across a couple different files to keep everything organized.
 
-## CRUD a Resource
+## CRUD a Book
 
-### Code along: (R)EAD resource collection
+### Code along: (R)EAD books collection
 - browser
 - curl
 - AJAX
 
-### Code along: (R)EAD specific resource
+### Code along: (R)EAD specific book
 - browser
 - curl
 - AJAX
 
-### Lab: (D)ELETE specific resource
+### Lab: (D)ELETE specific book
 - browser(?)
 - curl
 - AJAX
 
-### Code along: (U)PDATE specific resource
+### Code along: (U)PDATE specific book
 - browser(?)
 - curl
 - AJAX
 
-### Lab: (C)REATE new resource
+### Lab: (C)REATE new book
 - browser(?)
 - curl
 - AJAX
 
 ## Additional Resources
-
 -   [Learn jQuery AJAX](https://learn.jquery.com/ajax/jquery-ajax-methods/)
 -   [jQuery AJAX Docs](http://api.jquery.com/jquery.ajax/)
 

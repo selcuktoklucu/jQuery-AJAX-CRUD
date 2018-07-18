@@ -128,6 +128,11 @@ Then, the `data` variable would look like this:
 - curl
 - AJAX
 
+### Demo: UX
+- Input Validation: Javascript
+- Input Validation: HTML5
+- Clearing Forms
+
 ## Additional Resources
 -   [Learn jQuery AJAX](https://learn.jquery.com/ajax/jquery-ajax-methods/)
 -   [jQuery AJAX Docs](http://api.jquery.com/jquery.ajax/)

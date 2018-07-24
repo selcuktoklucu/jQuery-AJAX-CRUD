@@ -43,7 +43,7 @@ If not already installed in chrome, let's add a [JSON formatting utility](https:
 
 ## Methodical Approach
 1.  Test API in browser (if possible)
-1.  Make API with curl script
+1.  Test API with curl script
 1.  Add feature to web application with AJAX
     1.  Add a form to `index.html`.
     1.  Add a input fields and submit input to the form.
@@ -127,6 +127,11 @@ Then, the `data` variable would look like this:
 - browser(?)
 - curl
 - AJAX
+
+### Demo: UX
+- Input Validation: Javascript
+- Input Validation: HTML5
+- Clearing Forms
 
 ## Additional Resources
 -   [Learn jQuery AJAX](https://learn.jquery.com/ajax/jquery-ajax-methods/)

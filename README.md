@@ -60,52 +60,8 @@ Go to `https://wdi-library-api.herokuapp.com/books` to read the list of books.
 
 ### How to use `getFormFields`
 
-To be able to fetch data for just one book, we'll need a way to tell the API
-which book we're looking for. One way to do this is to have the user input the
-ID of the book they're looking for. It turns out that needing to grab some user
-input and send it to the API is a very common problem in front-end web
-development.
-
-To help solve that problem, we've included a function called `getFormFields` in
-the template that we use for our lessons, which is also the template you'll use
-for your projects. Let's take a look at how to use that function.
-
-First, your `<input>`s will need to be wrapped in a `<form>`, like this:
-
-```html
-<form id="my-form">
-  <input name="book[id]" type="text">
-  <input name="book[name]" type="text">
-  <button type="submit">Get Book</button>
-</form>
-```
-
-Then, in your Javascript, you'd do something like this:
-
-```js
-const getFormFields = require('<path to lib>/get-form-fields.js')
-
-$('#my-form').on('submit', function (event) {
-  event.preventDefault()
-
-  const form = event.target
-  const data = getFormFields(form)
-})
-```
-
-Then, the `data` variable would look like this:
-
-```js
-{
-  book: {
-    id: "<whatever was entered in the ID input >",
-    name: "<whatever was entered in the name input>"
-  }
-}
-```
-
-**Note:** In this training, and in your projects, you'll spread the above
-Javascript across a couple different files to keep everything organized.
+Check out the [get-form-fields](get-form-fields.md) markdown file for help
+with using the `getFormFields` function.
 
 ## CRUD a Book
 

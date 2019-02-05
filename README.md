@@ -6,6 +6,7 @@
 
 - [http-study](https://git.generalassemb.ly/ga-wdi-boston/http-study)
 - [json-study](https://git.generalassemb.ly/ga-wdi-boston/json-study)
+- [jquery-dom](https://git.generalassemb.ly/ga-wdi-boston/jquery-dom)
 
 ## Objectives
 

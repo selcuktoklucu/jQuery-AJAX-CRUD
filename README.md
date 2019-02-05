@@ -65,6 +65,19 @@ with using the `getFormFields` function.
 
 ## CRUD a Book
 
+Wait, what is [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) and why do you keep saying it?
+
+CRUD is an acronym that stands for:
+
+- Create
+- Read
+- Update
+- Destroy
+
+These four words describe the four basic functions of persistently storing
+data. They also closely relate to the HTTP verbs that we can use to interact
+with an API through requests. We'll discuss each of them as we code them out.
+
 ### Code along: (R)EAD books collection
 
 - browser

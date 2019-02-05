@@ -48,17 +48,52 @@ Go to `https://wdi-library-api.herokuapp.com/books` to read the list of books.
 
 ## Methodical Approach
 
-1. Test API in browser (if possible)
-1. Test API with curl script
-1. Add feature to web application with AJAX
-  - Add a form to `index.html`.
-  - Add a input fields and submit input to the form.
-  - Add an event listener to the form in the document ready event in
- `assets/scripts/index.js`.
-  - Add a submit handler to pass as callback to event listener
-  `assets/scripts/books/events.js`.
-  - Add a API call in `assets/scripts/books/api.js`.
-  - Add a success and failure handler in `assets/scripts/books/ui.js`.
+### jQuery AJAX Checklist
+
+- [ ] Test API in browser (if possible)
+- [ ] Test API with curl script
+- [ ] Test API with AJAX
+
+To implement AJAX, complete each step below, testing your web app along the way
+and using error-driven development to figure out where to go next:
+
+1. Adding the HTML:
+  - [ ] Add **html form** to `index.html`
+    - [ ] Add input fields (if required) and a `submit` input to the form
+    - [ ] Add appropriate name attribute to inputs
+
+2. Creating the event listener:
+
+  - [ ] Attach an **event listener** that listens to the form submit event in `assets/scripts/app.js`.
+     - [ ] Place within the **document ready** block.
+
+3. Creating the submit handler callback:
+  - [ ] Create a **submit handler** function in `assets/scripts/books/events.js`
+     - [ ] Preventing default action?
+     - [ ] Getting form field values, if necessary?
+
+4. Calling the API:
+     - [ ] Calling your api function:
+          - [ ] Make an **API call** using **$.ajax** in `assets/scripts/books/api.js`
+          - [ ] Invoke this function within your submit handler callback.
+     - [ ] Handling response from calling the AJAX function:
+         - [ ] Are you using `.then()` and `.catch()` and handling the successful and failure responses within each, respectively?
+            - [ ] Easily check with just having `console.log` within each function's parenthesis. Then replace with your actual success and failure callbacks.
+
+5. Handling API response:
+     - [ ] Create **success and failure handler functions** in `assets/scripts/ books/ui.js`
+     - [ ] Pass submit handler as a callback to the event listener
+
+6. Test it out!
+  - [ ] Test the feature again.
+  Getting any Errors?
+  - [ ] Double check each step.  Use more console.logs. Notice and fix any errors in console.
+  Not getting errors?
+  - [ ] You should see success or failure handler message on your page
+  Don't see your messages on the page?
+  - [ ] Add a div to hold the message on the page
+  - [ ] Make sure to populate this div with content in your response handler
+        functions within `ui.js`
 
 ### How to use `getFormFields`
 

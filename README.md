@@ -62,17 +62,17 @@ and using error-driven development to figure out where to go next:
     - [ ] Add input fields (if required) and a `submit` input to the form
     - [ ] Add appropriate name attribute to inputs
 
-2. Creating the event listener:
+1. Creating the event listener:
 
   - [ ] Attach an **event listener** that listens to the form submit event in `assets/scripts/app.js`.
      - [ ] Place within the **document ready** block.
 
-3. Creating the submit handler callback:
+1. Creating the submit handler callback:
   - [ ] Create a **submit handler** function in `assets/scripts/books/events.js`
      - [ ] Preventing default action?
      - [ ] Getting form field values, if necessary?
 
-4. Calling the API:
+1. Calling the API:
      - [ ] Calling your api function:
           - [ ] Make an **API call** using **$.ajax** in `assets/scripts/books/api.js`
           - [ ] Invoke this function within your submit handler callback.
@@ -80,14 +80,15 @@ and using error-driven development to figure out where to go next:
          - [ ] Are you using `.then()` and `.catch()` and handling the successful and failure responses within each, respectively?
             - [ ] Easily check with just having `console.log` within each function's parenthesis. Then replace with your actual success and failure callbacks.
 
-5. Handling API response:
+1. Handling API response:
      - [ ] Create **success and failure handler functions** in `assets/scripts/ books/ui.js`
      - [ ] Pass submit handler as a callback to the event listener
 
-6. Test it out!
+1. Test it out!
   - [ ] Test the feature again.
   Getting any Errors?
-  - [ ] Double check each step.  Use more console.logs. Notice and fix any errors in console.
+  - [ ] Double check each step.  Use more console.logs. Notice and fix any
+    errors in console.
   Not getting errors?
   - [ ] You should see success or failure handler message on your page
   Don't see your messages on the page?
@@ -102,7 +103,9 @@ with using the `getFormFields` function.
 
 ## CRUD a Book
 
-Wait, what is [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) and why do you keep saying it?
+Wait, what is
+[CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+and why do you keep saying it?
 
 CRUD is an acronym that stands for:
 

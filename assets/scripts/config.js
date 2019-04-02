@@ -12,6 +12,7 @@ if (window.location.hostname === 'localhost') {
   apiUrl = apiUrls.production
 }
 
+console.log('API URL is: ', apiUrl)
 module.exports = {
   apiUrl
 }

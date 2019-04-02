@@ -12,6 +12,35 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>My Library App</h1>
+      <h3 id="message"></h3>
+      <h2>Get all books</h2>
+      <button id="books-index">Get Books</button>
+      <h2>Get One Book</h2>
+      <form id="books-show">
+        <input name="id" type="text" placeholder="ID">
+        <button type="submit">Get book</button>
+      </form>
+
+      <form id="books-delete">
+        <input name="id" type="text" placeholder="ID">
+        <button type="submit">Delete a book</button>
+      </form>
+      <!-- <button id="">Delete The Book By ID</button> -->
+      <h2>update a book</h2>
+      <form id="books-update">
+        <input required type="text" name="book[title]" placeholder="New Book Title">
+        <input required type="text" name="book[author]" placeholder="New Book Author">
+        <input required type="number" name="book[id]" placeholder="ID of book you want to update">
+        <input type="submit" value="update">
+      </form>
+      <h2>Create a book</h2>
+      <form id="books-create">
+        <input required type="text" name="book[title]" placeholder="New Book Title">
+        <input required type="text" name="book[author]" placeholder="New Book Author">
+        <input type="submit" value="Create">
+      </form>
+      <div id="books-display"></div>
+
     </body>
 </html>
